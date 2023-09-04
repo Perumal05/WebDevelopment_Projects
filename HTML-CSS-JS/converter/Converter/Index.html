@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id = "wrapper">
+        <h2>Fahrenheit to Celsius converter</h2>
+        <div class = "inputdiv">
+            <input type = "text" id ="input" placeholder="Enter in Fahrenheit">
+        </div>
+        <div id="click">
+            <button type ="submit" onclick ="convert()">Convert</button>
+        </div>
+        <div id ="result"></div>
+    </div>
+    <script>
+        function convert(){
+            let val1 = Number(document.getElementById("input").value)
+            let ans = (val1- 32)*(5/9)
+            let result = document.getElementById("result")
+            result.innerHTML = ans.toFixed(4) + "  Celsius"
+        }
+    </script>
+</body>
+</html>
